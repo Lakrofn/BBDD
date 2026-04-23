@@ -32,7 +32,7 @@ BEGIN
 END;
 
 BEGIN
-	SERIE(0,10,2);
+	SERIE(0,10,3);
 END;
 
 -- 4

@@ -16,4 +16,11 @@ where dp.cantidad >= all(select dp2.cantidad from detalle_pedido dp2 );
 select * from cliente c 
 where c.limite_credito > all(select p.total from pago p); 
 
--- 6
+-- 11
+select * from empleado e
+where e.codigo_empleado not in (select c.codigo_empleado_rep_ventas from cliente c );
+
+-- 18
+select * from cliente c join pago p2 
+on c.codigo_cliente = p2.codigo_cliente
+where not exists (select p.codigo_cliente from pago p );
