@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="sql" deleted="false" description="" enabled="true" name="Procedure">CREATE OR REPLACE PROCEDURE MOSTRARABREVIATURAS&#13;
+AS&#13;
+	CURSOR EMPLEADOS IS&#13;
+	SELECT ENAME FROM EMP;&#13;
+	&#13;
+BEGIN&#13;
+	FOR EMPLEADO IN EMPLEADOS&#13;
+	LOOP&#13;
+		DBMS_OUTPUT.PUT_LINE(SUBSTR(EMPLEADO.ENAME,1,3));&#13;
+	END LOOP;&#13;
+END;&#13;
+&#13;
+BEGIN&#13;
+	MOSTRARABREVIATURAS;&#13;
+END;</template></templates>
